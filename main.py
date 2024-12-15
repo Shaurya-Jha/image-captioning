@@ -30,5 +30,5 @@ demo = gr.Interface(
     outputs=[gr.Text(label="Caption")]
 )
 
-# Launch the interface and bind it to port 8080 for Render
-demo.launch(share=True, server_port=8080)
+# Launch the interface and bind to 0.0.0.0 on port 8080
+demo.launch(share=True, server_port=8080, server_name="0.0.0.0")
