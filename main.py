@@ -25,9 +25,10 @@ def generate_caption(img):
 
 # gradio interface
 demo = gr.Interface(
-    fn = generate_caption, 
+    fn=generate_caption, 
     inputs=[gr.Image(label="Image")], 
     outputs=[gr.Text(label="Caption")]
 )
 
-demo.launch(share=True)
+# Launch the interface and bind it to port 8080 for Render
+demo.launch(share=True, server_port=8080)
